@@ -8,6 +8,8 @@ function App() {
   const [startOffset, setStartOffset] = useState(0);
   const [endOffset, setEndOffset] = useState(0);
   const offsetLabelWidth = Math.max(20, Math.ceil(Math.log10(inputString.length + offsetBase + 1)) * 12);
+  const repoURL = "https://github.com/mmahmad/charoffset-app";
+
 
   const handleInputChange = (e) => {
     setInputString(e.target.value);
@@ -27,6 +29,7 @@ function App() {
 
   return (
       <div className="App">
+        <div className="container">
         <header className="App-header">
           <h1>Character Offset Labeler</h1>
         </header>
@@ -84,6 +87,16 @@ function App() {
             ))}
           </div>
         </main>
+
+        <footer>
+          <div style={{ marginTop: '1rem' }}>
+            <a href={repoURL} target="_blank" rel="noopener noreferrer">
+              View the source code on GitHub
+            </a>
+          </div>
+        </footer>
+
+        </div>
       </div>
   );
 }
