@@ -1,21 +1,11 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: sans-serif;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +14,79 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.string-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  white-space: pre;
+  font-family: "Courier New", Courier, monospace;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.highlighted {
+  background-color: yellow;
+}
+
+.char-container {
+  display: inline-flex; /* Update this line */
+  flex-direction: column; /* Add this line */
+  align-items: center; /* Add this line */
+  margin: 0 5px;
+  font-size: 24px;
+  white-space: nowrap; /* Add this line */
+}
+
+.char-label-container {
+  display: inline-flex; /* Update this line */
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.offset-label {
+  font-size: 12px;
+  color: #777;
+  margin-top: 2px;
+  text-align: center;
+}
+
+
+.input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.input-box {
+  width: 80%;
+  padding: 0.5rem;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 1rem 0;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.offset-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offset-input {
+  width: 10%;
+  margin: 0 5px;
+  padding: 0.5rem;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
 }
